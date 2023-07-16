@@ -34,7 +34,9 @@ public class EnemyController : MonoBehaviour
         }
 
         if (_distance < _followDistance) {
-            _rb.transform.position = Vector2.MoveTowards(transform.position, _target.transform.position, _speed * Time.deltaTime);
+            _rb.velocity = (_direction * _speed * Time.deltaTime);
+        } else {
+            _rb.velocity = new Vector2(0, 0);
         }
     }
 }

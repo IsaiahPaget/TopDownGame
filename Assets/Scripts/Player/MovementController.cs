@@ -15,10 +15,11 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + _movement * _speed * Time.deltaTime);
+        _rb.velocity = (_movement * _speed * Time.deltaTime);
     }
 
     void OnMove(InputValue value) {
         _movement = value.Get<Vector2>();
+        _movement.Normalize();
     }
 }
