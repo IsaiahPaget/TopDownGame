@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour
         _rb.MovePosition(_rb.position + _movement * _speed * Time.deltaTime);
     }
 
-    public void OnMove(InputValue value) {
+    void OnMove(InputValue value) {
         _movement = value.Get<Vector2>();
     }
 }
