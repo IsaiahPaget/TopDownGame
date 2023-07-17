@@ -5,13 +5,10 @@ using UnityEngine.InputSystem;
 
 public class SpellCast : MonoBehaviour
 {
-    [SerializeField]
-    Transform _firePoint;
+    [SerializeField] private Spell spell;
 
-    [SerializeField]
-    Spell _spell;
-    
-    void OnFire() {
-        Instantiate(_spell, _firePoint);
+    public void OnFire(InputValue value)
+    {
+        spell.Cast();
     }
 }
