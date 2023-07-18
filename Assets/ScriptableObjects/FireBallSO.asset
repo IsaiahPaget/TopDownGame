@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FireBallSO
   m_EditorClassIdentifier: 
   _damage: 0
-  _speed: 1
+  _speed: 10
   _prefab: {fileID: 6941860457746514132, guid: 4d7c58f2ca6497f48bb19488d971c92a, type: 3}
   _duration: 0

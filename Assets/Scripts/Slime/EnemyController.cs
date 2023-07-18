@@ -11,7 +11,6 @@ public class EnemyController : MonoBehaviour
     float _followDistance;
     Rigidbody2D _rb;
 
-    [SerializeField]
     GameObject _target;
 
     Vector2 _direction;
@@ -20,6 +19,11 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        GameObject target = GameObject.Find("Player");
+        if (target != null) {
+            _target = target;
+        }
+
     }
 
     void Update() {

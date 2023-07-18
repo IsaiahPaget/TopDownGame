@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        _rb.velocity = (_movement * _speed * Time.deltaTime);
+        _rb.velocity = _movement * _speed * Time.deltaTime;
     }
 
     void OnMove(InputValue value) {

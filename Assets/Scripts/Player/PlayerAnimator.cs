@@ -5,7 +5,6 @@ public class PlayerAnimator : MonoBehaviour
 {
     Rigidbody2D _rb;
     Animator _animator;
-    Vector2 _movement;
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_WALK_BACK = "WalkBack";
     const string PLAYER_WALK_FORWARD = "WalkForward";
@@ -22,30 +21,42 @@ public class PlayerAnimator : MonoBehaviour
         if (_rb.velocity.Equals(new Vector2(0,0))) {
             _animator.Play(PLAYER_IDLE);
         }
-    }
+        if (_rb.velocity.x > 0) {
+            if (_rb.velocity.y > 0) {
+                _animator.Play(PLAYER_WALK_BACK);
 
-    void OnMove(InputValue value) {
-        _movement = value.Get<Vector2>();
-        _movement.Normalize();
+            }
+            else if (_rb.velocity.y < 0) {
+                _animator.Play(PLAYER_WALK_FORWARD);
 
-        if (_movement.x > 0) {
+            }
+            else {
             _animator.Play(PLAYER_WALK_RIGHT);
-
+            }  
         } 
         
-        if (_movement.x < 0) {
-            _animator.Play(PLAYER_WALK_LEFT);
+        if (_rb.velocity.x < 0) {
+            if (_rb.velocity.y > 0) {
+                _animator.Play(PLAYER_WALK_BACK);
 
+            }
+            else if (_rb.velocity.y < 0) {
+                _animator.Play(PLAYER_WALK_FORWARD);
+
+            }
+            else {
+                _animator.Play(PLAYER_WALK_LEFT);
+            }  
         }
 
-        if (_movement.y > 0) {
+        if (_rb.velocity.y > 0) {
             _animator.Play(PLAYER_WALK_BACK);
 
         }
 
-        if (_movement.y < 0) {
+        if (_rb.velocity.y < 0) {
             _animator.Play(PLAYER_WALK_FORWARD);
 
-        }      
+        }  
     }
 }
