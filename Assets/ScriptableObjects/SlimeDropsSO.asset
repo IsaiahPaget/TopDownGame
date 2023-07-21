@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148d696ae4a29d9449918ab09288560a, type: 3}
+  m_Name: SlimeDropsSO
+  m_EditorClassIdentifier: 
+  _item: {fileID: 3965289507964829151, guid: 2b6b8f67cb452704fa8b50e67aceac02, type: 3}

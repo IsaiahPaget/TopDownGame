@@ -10,3 +10,4 @@ public class SlimeExplosionParticles : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 }
+ 
