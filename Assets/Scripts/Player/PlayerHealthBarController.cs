@@ -5,18 +5,20 @@ using UnityEngine;
 public class PlayerHealthBarController : MonoBehaviour
 {
     [SerializeField]
-    float _maxHealth;
-    float _currentHealth;
+    PlayerStats _playerStats;
 
     [SerializeField]
     HealthBarController _healthBarController;
-    void Awake()
+    void Awake() {
+        _playerStats.currentHealth = _playerStats.maxHealth;
+    }
+    void Start()
     {
-        _healthBarController.SetMaxHealth(_maxHealth);        
+        _healthBarController.SetMaxHealth(_playerStats.maxHealth);        
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        _currentHealth -= 1;
-        _healthBarController.SetHealth(_currentHealth);
+        _playerStats.currentHealth -= 1;
+        _healthBarController.SetHealth(_playerStats.currentHealth);
     }
 }

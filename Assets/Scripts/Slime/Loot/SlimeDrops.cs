@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "SlimeDropsSO")]
+[CreateAssetMenu(fileName = "SlimeDropsSO", menuName ="ScriptableObjects/SlimeDropsSo")]
 public class SlimeDrops : Loot
 {
     [SerializeField]

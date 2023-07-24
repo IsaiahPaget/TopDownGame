@@ -13,17 +13,11 @@ public class HealthBarController : MonoBehaviour
     }
 
     public void SetHealth(float amount) {
-        if (amount > _maxHealth) {
-            _currentHealth = _maxHealth;
-        } else if (amount < 0){
-            _currentHealth = 0;
-        } else {
-            _currentHealth = amount;
-        }
+        _currentHealth = amount;
         _slider.value = _currentHealth;
     }
     public void SetMaxHealth(float amount) {
-        if (amount !<= 0) {
+        if (amount != 0 && amount >= 0 ) {
             _maxHealth = amount;
         }
         _currentHealth = _maxHealth;

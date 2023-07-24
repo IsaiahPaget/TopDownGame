@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FireBallSO")]
+[CreateAssetMenu(fileName = "FireBallSO", menuName ="ScriptableObjects/FireBallSO")]
 public class FireBall : Spell
 {
     GameObject _fireBall;

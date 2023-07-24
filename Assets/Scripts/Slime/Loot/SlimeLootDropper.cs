@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SlimeLootDropper : MonoBehaviour
 {
+
     [SerializeField] 
     Loot _loot;
 
-    void OnDisable()
-    {
+    public void DropLoot() {
         _loot.Drop(transform);
     }
 }

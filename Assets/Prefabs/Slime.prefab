@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1252805242807691342}
   - component: {fileID: 1252805242807691343}
   - component: {fileID: 1252805242807691340}
-  - component: {fileID: 1252805242807691341}
   - component: {fileID: 1252805242807691337}
+  - component: {fileID: 4410748344797987163}
+  - component: {fileID: 9192347993014147171}
+  - component: {fileID: 1252805242807691341}
   - component: {fileID: 7939908409331907194}
   - component: {fileID: 9051831305654075014}
-  - component: {fileID: 9192347993014147171}
-  - component: {fileID: 4410748344797987163}
   - component: {fileID: 1844327097806076444}
+  - component: {fileID: 6540504021546781927}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
@@ -113,20 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1252805242807691341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252805242807691378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b83b3024a0deec146a91dfa09d985abc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 50
-  _followDistance: 10
 --- !u!95 &1252805242807691337
 Animator:
   serializedVersion: 5
@@ -148,58 +135,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7939908409331907194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252805242807691378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e61c6df7b4568e14792199ad4b948343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _particles: {fileID: 8967681574705231687, guid: 0c88ddfc5d12f184f8fc7e222efb3434, type: 3}
---- !u!114 &9051831305654075014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252805242807691378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0a55241ef60c742aa4902fbe66c275, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _loot: {fileID: 11400000, guid: d89da7e72f7e42749aa75f045cd3e416, type: 2}
---- !u!61 &9192347993014147171
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252805242807691378}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0017676353, y: -0.05833347}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.45201874, y: 0.77020156}
-  m_EdgeRadius: 0
 --- !u!198 &4410748344797987163
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4907,6 +4842,74 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!61 &9192347993014147171
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805242807691378}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0017676353, y: -0.05833347}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45201874, y: 0.77020156}
+  m_EdgeRadius: 0
+--- !u!114 &1252805242807691341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805242807691378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83b3024a0deec146a91dfa09d985abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slimeStats: {fileID: 6540504021546781927}
+  _followDistance: 10
+--- !u!114 &7939908409331907194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805242807691378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61c6df7b4568e14792199ad4b948343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lootDropper: {fileID: 9051831305654075014}
+  _slimeStats: {fileID: 6540504021546781927}
+  _particles: {fileID: 8967681574705231687, guid: 0c88ddfc5d12f184f8fc7e222efb3434, type: 3}
+--- !u!114 &9051831305654075014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805242807691378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0a55241ef60c742aa4902fbe66c275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loot: {fileID: 11400000, guid: d89da7e72f7e42749aa75f045cd3e416, type: 2}
 --- !u!199 &1844327097806076444
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4979,3 +4982,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6540504021546781927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252805242807691378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00646855bcaf6f34e9083feb459c8f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  maxHealth: 5
+  currentHealth: 0

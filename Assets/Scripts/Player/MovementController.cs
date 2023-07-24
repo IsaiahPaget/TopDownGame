@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 public class MovementController : MonoBehaviour
 {
     [SerializeField]
-    float _speed;
+    PlayerStats _playerStats; 
 
     Vector2 _movement;
 
@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        _rb.velocity = _movement * _speed * Time.deltaTime;
+        _rb.velocity = _movement * _playerStats.speed * Time.deltaTime;
     }
 
     void OnMove(InputValue value) {

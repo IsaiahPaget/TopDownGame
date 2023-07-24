@@ -9,5 +9,6 @@ public abstract class Spell : ScriptableObject
     [SerializeField] protected GameObject _prefab;
     [SerializeField] protected float _duration;
 
+    public float damage => _damage;
     public abstract void Cast();
 }

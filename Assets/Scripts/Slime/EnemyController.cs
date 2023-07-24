@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField]
-    float _speed;
+    SlimeStats _slimeStats;
 
     [SerializeField]
     float _followDistance;
@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
         }
 
         if (_distance < _followDistance) {
-            _rb.velocity = (_direction * _speed * Time.deltaTime);
+            _rb.velocity = (_direction * _slimeStats.speed * Time.deltaTime);
         } else {
             _rb.velocity = new Vector2(0, 0);
         }
